@@ -1,0 +1,15 @@
+#!/bin/bash
+
+domains="microsoft.com
+sans.org
+google.com
+gmail.com
+bing.com
+facebook.com
+hotmail.com"
+
+for domain in $domains
+do
+     ipv4=$(dig +short -t a @8.8.8.8 $domain)
+     echo $domain has ip = $ipv4
+done
