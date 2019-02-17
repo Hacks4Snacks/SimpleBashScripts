@@ -1,4 +1,4 @@
-# simpleBashScripts
+# BashScripts
 A variety of Bash scripts.
 
 ## Getting Started
