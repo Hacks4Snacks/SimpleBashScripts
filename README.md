@@ -17,6 +17,7 @@ A variety of simple Bash scripts.
 1. [randomFile](scripts/randomFile): create unique file/folder automatically with date and time stamp
 1. [weather](scripts/weather): check the weather in a specified location or using the geolocation of the ip address by default.
 1. [pomodoro](scripts/pomodoro): a simple pomodoro app written in bash
+1. [bashTemplate](scripts/bashTemplate): script template based on Google Style Guide: https://google.github.io/styleguide/shell.xml
 
 ## Programming
 
@@ -25,6 +26,9 @@ A variety of simple Bash scripts.
 ## Reconnaissance
 
 1. [bulkDns](scripts/bulkDns): bulk DNS lookup
+
+## Cloud
+1. [awsEC2](scripts/awsEC2): simple script to deploy EC2 instance in AWS
 
 ## System Administration
 
