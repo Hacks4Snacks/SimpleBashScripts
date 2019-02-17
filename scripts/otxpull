@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#This script pulls all indicators in pulses updated from midnight the day before and creates a line delimited file of the indicators
+#You must add your own OTX API key
+
+date_back=$(date -d yesterday '+%Y-%m-%dT00:00:00')
+
+for ((i=1; ; i++)); do
+    contents=$(curl -s -H "X-OTX-API-KEY: ENTERAPIKEYHERE" -H "Content-Type: application/json" "https://otx.alienvault.com:443/api/v1/pulses/subscribed?modified_since=$date_back&limit=5000&page=$i" | python -m json.tool)
+    echo "$contents" >> otxtemp
+    if [[ $contents =~ '"next": null' ]]
+    then break
+    fi
+done
+cat otxtemp | grep -oP '(?<="indicator": ")[^"]*' > otx.out
+rm otxtemp
