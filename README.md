@@ -1,5 +1,5 @@
 # simpleBashScripts
-A variety of simple Bash scripts.
+A variety of Bash scripts.
 
 ## Getting Started
 
