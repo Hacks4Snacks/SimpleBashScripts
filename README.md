@@ -27,6 +27,7 @@ A variety of simple Bash scripts.
 
 1. [bulkDns](scripts/bulkDns): bulk DNS lookup
 2. [otxpull](scripts/otxpull): pull recently updated indicators from pulse subscriptions
+3. [cidrToIP](scripts/cidrToIP): convert provided CIDR address to list of IPs
 
 ## Cloud
 1. [awsEC2](scripts/awsEC2): simple script to deploy EC2 instance in AWS
