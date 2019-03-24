@@ -1,0 +1,63 @@
+#!/bin/bash
+
+# softwareRemove -- remove bloatware from Ubuntu host
+
+sudo="sudo"
+tmpdir=$(mktemp -d)
+log=$(mktemp)
+packages="aisleriot gnome-mahjongg gnome-mines gnome-sudoku cheese rhythmbox shotwell simple-scan ubuntu-web-launchers totem totem-plugins"
+
+declare -a packages
+
+print_banner(){
+cat <<EO
+┌─────────────────────────────────────────────────────────┐
+│                    AutoRemove 0.1                       │
+└─────────────────────────────────────────────────────────┘
+EO
+}
+
+
+log_icon="\e[31m✓\e[0m"
+log_icon_ok="\e[32m✓\e[0m"
+log_icon_nok="\e[31m✗\e[0m"
+
+run_and_log(){
+    $1 &> ${log} && {
+        _log_icon=$log_icon_ok
+    } || {
+        _log_icon=$log_icon_nok
+        exit_=1
+    }
+    echo -e "${_log_icon} ${2}"
+    [[ $exit_ ]] && { echo -e "\t -> ${_log_icon} $3";  exit; }
+}
+
+check_user(){
+    [[ $UID != 0 ]] && {
+        type -f $sudo || {
+            echo "You're not root and you don't have $sudo, please become root or install $sudo before executing $0"
+            exit
+        }
+    } || {
+        sudo=""
+    }
+
+    [[ ! -e /etc/debian_version ]] && {
+        echo  "This script currently works only on debian-based (debian, ubuntu...) distros"
+        exit 1
+    }
+}
+
+remove_packages(){
+   $sudo apt remove --purge -y ${packages}
+   $sudo apt auto-remove -y
+   return 0
+}
+
+print_banner
+check_user
+
+echo "Logging enabled on ${log}"
+
+run_and_log remove_packages "Removing packages ${packages}" "Something failed removing packages, please review the log file"
