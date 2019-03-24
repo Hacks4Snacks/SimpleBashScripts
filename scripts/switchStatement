@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#set value of first argument
+arg=$1
+
+case $arg in
+	0)
+		echo false
+		;;
+	1)
+		echo true
+		;;
+	*)
+		echo unknown
+		;;
+esac
+

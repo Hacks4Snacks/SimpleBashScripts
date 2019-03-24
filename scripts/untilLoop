@@ -1,0 +1,11 @@
+#!/bin/bash
+
+arg=no
+
+until [ $arg == "yes" ]
+do
+	echo "are you ready to continue? yes or no"
+	read arg
+	
+done
+echo "Going to continue"
