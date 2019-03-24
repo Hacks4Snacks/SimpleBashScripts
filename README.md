@@ -16,8 +16,9 @@ A variety of Bash scripts.
 11. [up](scripts/up): move up a directory in shell script
 12. [randomFile](scripts/randomFile): create unique file/folder automatically with date and time stamp
 13. [weather](scripts/weather): check the weather in a specified location or using the geolocation of the ip address by default.
-14. [pomodoro](scripts/pomodoro): a simple pomodoro app written in bash
-15. [bashTemplate](scripts/bashTemplate): script template based on Google Style Guide: https://google.github.io/styleguide/shell.xml
+15. [switchStatement](scripts/switchStatement): simple example of a switch statement
+16. [unitlLoop](scripts/untilLoop): simple example of an until loop
+17. [bashTemplate](scripts/bashTemplate): script template based on Google Style Guide: https://google.github.io/styleguide/shell.xml
 
 ## Programming
 
