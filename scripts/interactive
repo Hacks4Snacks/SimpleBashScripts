@@ -1,8 +1,7 @@
-#! /bin/bash
-echo "Hey what's Your First Name?";
-read a;
-echo "welcome Mr./Mrs. $a, would you like to tell us, Your Last Name";
-read b;
-echo "Thanks Mr./Mrs. $a $b for telling us your name";
+#!/bin/bash
+#interactive -- demo of interactive input
+
+read -p "Hello, what is your first name? " firstName
+read -p "It is nice to meet you $firstName, what is your last name? " lastName
 echo "*******************"
-echo "Mr./Mrs. $b, it's time to say you good bye"
+echo "$firstName $lastName, it's time to say good bye"
