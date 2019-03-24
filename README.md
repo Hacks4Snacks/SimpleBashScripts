@@ -44,6 +44,9 @@ A variety of Bash scripts.
 6. [collectNetworkInfo](scripts/collectNetworkInfo): gather information related to server
 7. [remoteBackup](scripts/remoteBackup): backup a local file into a remote server
 8. [running](scripts/running): show running processes for the current user
+9. [softwareInstall](scripts/softwareInstall): auto install desired software
+10. [softwareRemove](scripts/softwareRemove): auto remove Ubuntu bloatware
+11. [showOSVersion](scripts/showOSVersion): show running OS version
 
 ## Math
 
