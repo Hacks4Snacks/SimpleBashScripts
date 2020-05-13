@@ -1,5 +1,5 @@
 # BashScripts
-A variety of Bash scripts.
+A collection of Bash scripts that are either not meaningful or complex enough to warrant an independent repository.
 
 ## Getting Started
 
