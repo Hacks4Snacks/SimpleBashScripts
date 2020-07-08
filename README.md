@@ -20,19 +20,18 @@ A collection of Bash scripts that are either not meaningful or complex enough to
 16. [unitlLoop](scripts/untilLoop): simple example of an until loop
 17. [bashTemplate](scripts/bashTemplate): script template based on Google Style Guide: https://google.github.io/styleguide/shell.xml
 
-## Programming
-
-1. [versionCompare](scripts/versionCompare): compare two version number
-
-## Reconnaissance
+## Security
 
 1. [bulkDns](scripts/bulkDns): bulk DNS lookup
 2. [otxpull](scripts/otxpull): pull recently updated indicators from pulse subscriptions
 3. [cidrToIP](scripts/cidrToIP): convert provided CIDR address to list of IPs
 4. [nmapDiff](scripts/nmapDiff): compare previous nmap results and identify changes
 5. [nmapRdns](scripts/nmapRdns): use NMAP for reverse DNS
+6. [mal_binary_extract_http](scripts/mal_binary_extract_http.sh): extract binary from pcap using http stream
+7. [mal_binary_extract](scripts/mal_binary_extract.sh): extract binary from pcap using tcp stream
 
 ## Cloud
+
 1. [awsEC2](scripts/awsEC2): simple script to deploy EC2 instance in AWS
 
 ## System Administration
@@ -48,6 +47,8 @@ A collection of Bash scripts that are either not meaningful or complex enough to
 9. [softwareInstall](scripts/softwareInstall): auto install desired software
 10. [softwareRemove](scripts/softwareRemove): auto remove Ubuntu bloatware
 11. [showOSVersion](scripts/showOSVersion): show running OS version
+12. [auditd](scripts/auditd): automated install and configuration of auditd and log forwarding
+13. [versionCompare](scripts/versionCompare): compare two version number
 
 ## Math
 
