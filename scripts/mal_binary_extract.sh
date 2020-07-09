@@ -1,5 +1,5 @@
 #!/bin/bash
-# Script to extract binary files from PCAP
+# Script to extract binary files from Snort PCAP
 dir="/path/to/pcap/directory"
 
 for file in ${dir}/*
@@ -12,10 +12,13 @@ do
 	    infile=$filename
             outfile=malware
 
-                for stream in $(tshark -nlr $infile -T fields -e tcp.stream | sort -n | uniq | sed 's/\r//')
+	   
+                #for stream in $(tshark -nlr $infile -T fields -e tcp.stream | sort -n | uniq | sed 's/\r//')
                 do
-                    echo "Processing stream $stream: ${outfile}_${stream}"
-                    sudo tshark -nlr $infile -qz "follow,tcp,raw,$stream" | tail -n +7 | sed 's/^\s\+//g' | xxd -r -p > /path/to/output/dir/${outfile}_${stream}
+                    #echo "Processing stream $stream: ${outfile}_${stream}"
+                    # alternative to extract http objects
+		    sudo tshark -nr $infile --export-objects http,tmpfolder
+                    #sudo tshark -nlr $infile -qz "follow,tcp,raw,$stream" | tail -n +7 | sed 's/^\s\+//g' | xxd -r -p > /path/to/output/dir/${outfile}_${stream}
                 done
 	# uncomment the below to run the binary (useful if kernel hook monitoring
         #cd /path/to/output/dir
