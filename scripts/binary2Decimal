@@ -1,7 +1,7 @@
 #!/bin/bash 
 
 echo "Enter a number :"
-read Binary
+read -r Binary
 
 if [ $Binary -eq 0 ]; then
 	echo "Enter a valid number "
