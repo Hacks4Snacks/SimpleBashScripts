@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Overly complicated method of getting local interfaces and corresponding IPv4 address
+# Dependency on jq
+
+ip -j -f inet addr | jq '.[].addr_info | .[] | .label, .local' | sed 'N;s/\n/ /' | sed 's/^\( *[^ ]\+\)/\1 :/' | tr -d '"' | sed '/^$/d;s/[[:blank:]]//g'
