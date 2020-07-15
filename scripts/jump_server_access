@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Simple script to SSH through a bastion host/jumpserver to a target server.
+
+ssh username@targetsever -o ProxyCommand="ssh -W %h:%p username@jumpserver"
