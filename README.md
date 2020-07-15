@@ -29,6 +29,7 @@ A collection of Bash scripts that are either not meaningful or complex enough to
 5. [nmapRdns](scripts/nmapRdns): use NMAP for reverse DNS
 6. [mal_binary_extract_http](scripts/mal_binary_extract_http.sh): extract binary from pcap using http stream
 7. [mal_binary_extract](scripts/mal_binary_extract.sh): extract binary from pcap using tcp stream
+8. [get_local_ipv4](scripts/get_local_ipv4): overly complicated method for getting local interface and ipv4 address
 
 ## Cloud
 
@@ -49,6 +50,9 @@ A collection of Bash scripts that are either not meaningful or complex enough to
 11. [showOSVersion](scripts/showOSVersion): show running OS version
 12. [auditd](scripts/auditd): automated install and configuration of auditd and log forwarding
 13. [versionCompare](scripts/versionCompare): compare two version number
+14. [remote_scp](scripts/remote_scp_through_jump_server): scp file from remote machine through a jumpserver to localhost
+15. [scp_jumpserver](scripts/scp_through_jump_server): scp file to remote machine through a jumpserver
+16. [jump_server_access](scripts/jump_server_access): ssh to remote machine through a jumpserver
 
 ## Math
 
