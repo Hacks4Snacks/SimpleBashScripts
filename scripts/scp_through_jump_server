@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Simple script to SCP local file to remote host through a jump server
+
+scp -o ProxyJump=username@jumpserver /path/to/local/file username@targetserver:/path/to/remote/folder
