@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Simple script to SCP remote file through a jumpserver to the local host
+# Setting SSH keys on each host is recommended
+
+echo 'Remember to change the remote file path.'
+echo 'Transferring file, default destination is the local desktop.'
+ssh -o StrictHostKeyChecking=no -A -R 9999:localhost:22 username@jumpserver 'ssh -o StrictHostKeyChecking=no -A -R 9999:localhost:9999 username@targetserver scp -P 9999 /path/to/remote/file username@localhost:/path/to/local/folder'
