@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Simple script (one-liner) to get running Docker container names and ips
+
+docker ps -q | xargs -n 1 docker inspect --format '{{ .Name }} {{range .NetworkSettings.Networks}} {{.IPAddress}}{{end}}' | sed 's#^/##';
