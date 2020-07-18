@@ -1,21 +1,23 @@
 #!/bin/bash
 
 # Checks to see if a OpenVPN process already is started
-vpnExist=$(ps auxf | grep openvpn | fgrep -v grep)
 
-if [ "$vpnExist" ]; then
+CONFIG=/path/to/openvpn/configuration
+VPN_EXIST=$(pgrep openvpn) # | grep -Fv grep)
+
+if [ "$VPN_EXIST" ]; then
     echo
     echo "Openvpn process already exists. Exiting."
     exit 1
 fi
 
-openvpn --config "PATHTOOVPNFILE" --daemon
+openvpn --config "$CONFIG" --daemon
 
-vpnIP=$(dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F'"' '{ print $2}')
+VPN_IP=$(dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F'"' '{ print $2}')
 #rDig=$(dig +noauthority +noadditional +noqr +nostats +noidentify +nocmd +noquestion +nocomments -x $vpnIP | awk -F'"' '{ print $5}')
 
-echo
-echo "My new IP is: $vpnIP  ($rDig)"
-echo
+echo ""
+echo "My new IP is: $VPN_IP"  #($rDig)"
+echo ""
 
 exit 0
