@@ -5,4 +5,11 @@
 
 echo 'Remember to change the remote file path.'
 echo 'Transferring file, default destination is the local desktop.'
-ssh -o StrictHostKeyChecking=no -A -R 9999:localhost:22 username@jumpserver 'ssh -o StrictHostKeyChecking=no -A -R 9999:localhost:9999 username@targetserver scp -P 9999 /path/to/remote/file username@localhost:/path/to/local/folder'
+
+USERNAME=username
+TARGETSERVER=target.server
+JUMPSERVER=jump.server
+LOCALFOLDER=/path/to/local/folder
+REMOTEFILE=/path/to/remote/file
+
+ssh -o StrictHostKeyChecking=no -A -R 9999:localhost:22 $USERNAME@$JUMPSERVER "ssh -o StrictHostKeyChecking=no -A -R 9999:localhost:9999 $USERNAME@$TARGETSERVER scp -P 9999 $REMOTEFILE $USERNAME@localhost:$LOCALFOLDER"
