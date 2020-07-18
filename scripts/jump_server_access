@@ -3,7 +3,7 @@
 # Simple script to SSH through a bastion host/jumpserver to a target server.
 
 # Global Variables
-USERNAME=username 
+USERNAME=username
 TARGETSERVER=target.server
 JUMPSERVER=jump.server
 
