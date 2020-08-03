@@ -1,25 +1,6 @@
 # BashScripts
 A collection of Bash scripts that are either not meaningful or complex enough to warrant an independent repository.
 
-## Getting Started
-
-1. [hello](scripts/hello): get a simple output
-2. [process](scripts/process): execute more than one command in a script
-3. [interactive](scripts/interactive): a simple but very much interactive script
-4. [specialPattern](scripts/specialPattern): draw a diamond pattern with dots(.)
-5. [whileRead](scripts/whileRead): read lines from a file using while loop
-6. [readMenu](scripts/readMenu): display a menu for system information
-7. [whileMenu](scripts/whileMenu): a repeated menu for system information
-8. [colorFull](scripts/colorFull): provide you with the output of several colours
-9. [convertLowercase](scripts/convertLowercase): convert data either from the file or standard input to lowercase
-10. [encrypt](scripts/encrypt): encrypt a file/folder with password
-11. [up](scripts/up): move up a directory in shell script
-12. [randomFile](scripts/randomFile): create unique file/folder automatically with date and time stamp
-13. [weather](scripts/weather): check the weather in a specified location or using the geolocation of the ip address by default.
-15. [switchStatement](scripts/switchStatement): simple example of a switch statement
-16. [unitlLoop](scripts/untilLoop): simple example of an until loop
-17. [bashTemplate](scripts/bashTemplate): script template based on Google Style Guide: https://google.github.io/styleguide/shell.xml
-
 ## Security
 
 1. [bulkDns](scripts/bulkDns): bulk DNS lookup
@@ -53,19 +34,18 @@ A collection of Bash scripts that are either not meaningful or complex enough to
 14. [remote_scp](scripts/remote_scp_through_jump_server): scp file from remote machine through a jumpserver to localhost
 15. [scp_jumpserver](scripts/scp_through_jump_server): scp file to remote machine through a jumpserver
 16. [jump_server_access](scripts/jump_server_access): ssh to remote machine through a jumpserver
+17. [decimal2Binary](scripts/decimal2Binary): convert Decimal Number to Binary
+18. [binary2Decimal](scripts/binary2Decimal): convert Binary Number back to decimal
+19. [encrypt](scripts/encrypt): encrypt a file/folder with password
+20. [convertLowercase](scripts/convertLowercase): convert data either from the file or standard input to lowercase
+21. [randomFile](scripts/randomFile): create unique file/folder automatically with date and time stamp
 
-## Math
+## Templates and Reference
 
-1. [addition](scripts/addition): perform addition of two numbers
-2. [substraction](scripts/substraction): perform substraction of two numbers
-3. [multiplication](scripts/multiplication): perform multiplication of two numbers
-4. [division](scripts/division): perform division of two numbers
-5. [simpleCalc](scripts/simpleCalc): a simple calculator
-6. [table](scripts/table): print table of any number
-7. [evenOdd](scripts/evenOdd): check if a number input from standard input is odd or even
-8. [factorial](scripts/factorial): generate the factorial of a number
-9. [armstrong](scripts/armstrong): check if a provided number is Armstrong or not
-10. [prime](scripts/prime): check if a number is prime or not
-11. [fibonacci](scripts/fibonacci): test if a number being entered is a Fibonacci or not
-12. [decimal2Binary](scripts/decimal2Binary): convert Decimal Number to Binary
-13. [binary2Decimal](scripts/binary2Decimal): convert Binary Number back to decimal
+1. [whileRead](scripts/whileRead): read lines from a file using while loop
+2. [readMenu](scripts/readMenu): display a menu for system information
+3. [whileMenu](scripts/whileMenu): a repeated menu for system information
+4. [colorFull](scripts/colorFull): provide you with the output of several colours
+5. [switchStatement](scripts/switchStatement): simple example of a switch statement
+6. [unitlLoop](scripts/untilLoop): simple example of an until loop
+7. [bashTemplate](scripts/bashTemplate): script template based on Google Style Guide: https://google.github.io/styleguide/shell.xml
